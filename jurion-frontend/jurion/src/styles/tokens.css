@@ -1,0 +1,158 @@
+/* JURION · фирменный стиль ПСБ.
+   Палитра взята из материалов кейса: тёмно-синий ПСБ #001F74, оранжевый
+   знака #FF6200, фиолетовый знака #8D87FF и «аврора» — волна
+   от фиолетового к персиковому и оранжевому с обложки.
+   Оранжевый в интерфейсе означает доказательность: цитаты, основания. */
+
+:root {
+  --font-ui: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-doc: "PT Serif", "Georgia", "Times New Roman", serif;
+
+  /* Шкала: 12 / 13 / 14 / 15 / 17 / 21 / 28 / 40 / 64 */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-md: 0.875rem;
+  --fs-base: 0.9375rem;
+  --fs-lg: 1.0625rem;
+  --fs-xl: 1.3125rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.5rem;
+  --fs-hero: clamp(2.75rem, 5.2vw, 4.25rem);
+
+  --lh-tight: 1.2;
+  --lh-ui: 1.45;
+  --lh-read: 1.6;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Радиусы по иерархии, как в материалах ПСБ: крупные скругления у панелей */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-full: 999px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 320ms;
+
+  --sidebar-w: 288px;
+  --source-w: 460px;
+  --chat-max: 800px;
+
+  /* Фирменные константы (одинаковы в обеих темах) */
+  --psb-navy: #001f74;
+  --psb-navy-deep: #000f45;
+  --psb-orange: #ff6200;
+  --psb-violet: #8d87ff;
+  --psb-peach: #ffb08a;
+  --aurora: linear-gradient(100deg, #8d87ff 0%, #b49cff 28%, #ffb08a 58%, #ff6200 100%);
+
+  /* Светлая тема */
+  --c-ink: #0d1a4b;
+  --c-ink-2: #3b4673;
+  --c-ink-3: #6a7298;
+  --c-ink-4: #9ba1be;
+  --c-canvas: #f2f2f7;
+  --c-surface: #ffffff;
+  --c-surface-2: #f7f7fb;
+  --c-surface-sunk: #e9eaf3;
+  --c-line: #e2e3ee;
+  --c-line-strong: #cacde0;
+
+  --c-brand: #001f74;
+  --c-brand-ink: #ffffff;
+  --c-brand-soft: #e6e9f6;
+  --c-tile: #e3e5f4;
+
+  --c-evidence: #ff6200;
+  --c-evidence-ink: #c84a00;
+  --c-evidence-soft: #fff0e6;
+  --c-evidence-line: #ffc7a3;
+
+  --c-ai: #6a62e8;
+  --c-ai-soft: #eeedff;
+
+  --c-ok: #137a4b;
+  --c-ok-soft: #e4f4ec;
+  --c-warn: #985a00;
+  --c-warn-soft: #fdf2df;
+  --c-bad: #b42318;
+  --c-bad-soft: #fdecea;
+  --c-info: #2945b0;
+  --c-info-soft: #e9eefd;
+
+  --c-focus: #6a62e8;
+  --c-highlight: #ffe9a8;
+
+  /* Тёмная «обложка» ПСБ — сайдбар, hero, шапки панелей */
+  --c-night: #000f45;
+  --c-night-2: #0a1a5c;
+  --c-night-ink: #ffffff;
+  --c-night-ink-2: rgba(255, 255, 255, 0.72);
+  --c-night-ink-3: rgba(255, 255, 255, 0.5);
+  --c-night-line: rgba(255, 255, 255, 0.1);
+  --c-night-glass: rgba(255, 255, 255, 0.08);
+
+  --shadow-1: 0 1px 2px rgba(0, 31, 116, 0.06);
+  --shadow-2: 0 10px 30px -14px rgba(0, 31, 116, 0.28), 0 1px 2px rgba(0, 31, 116, 0.06);
+  --shadow-3: 0 30px 70px -24px rgba(0, 31, 116, 0.45);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --c-ink: #e9ecfb;
+  --c-ink-2: #b8bfe0;
+  --c-ink-3: #8790bb;
+  --c-ink-4: #5d6694;
+  --c-canvas: #050d33;
+  --c-surface: #0c1747;
+  --c-surface-2: #101d55;
+  --c-surface-sunk: #081240;
+  --c-line: #1d2b68;
+  --c-line-strong: #2c3d82;
+
+  --c-brand: #8d87ff;
+  --c-brand-ink: #050d33;
+  --c-brand-soft: #1b2870;
+  --c-tile: #18256a;
+
+  --c-evidence: #ff7a2e;
+  --c-evidence-ink: #ffa36b;
+  --c-evidence-soft: #38203a;
+  --c-evidence-line: #7c3b2c;
+
+  --c-ai: #a9a4ff;
+  --c-ai-soft: #241f66;
+
+  --c-ok: #4bc98d;
+  --c-ok-soft: #10332f;
+  --c-warn: #f2b14b;
+  --c-warn-soft: #382a17;
+  --c-bad: #ff8a80;
+  --c-bad-soft: #3b1830;
+  --c-info: #95abff;
+  --c-info-soft: #172a6c;
+
+  --c-focus: #a9a4ff;
+  --c-highlight: #5b4a14;
+
+  --c-night: #020823;
+  --c-night-2: #08134a;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+  --shadow-3: 0 30px 70px -24px rgba(0, 0, 0, 0.8);
+
+  color-scheme: dark;
+}
